@@ -17,8 +17,9 @@ export default function Home() {
           I&apos;ve worked on <Link href="/work">here</Link>.
         </p>
         <p className="mb-0">
-          Outside work I lift, play football on weekends, and tinker with
-          Roblox games. I&apos;m also a big cat person. I almost always have
+          Outside work I lift, play football on weekends, and like trying my
+          hand at different things, from hardware projects with ESP32s to
+          software side projects. I&apos;m also a big cat person. I almost always have
           music on while working, and <mark>EDEN</mark> is still my favourite
           artist.
         </p>

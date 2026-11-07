@@ -17,6 +17,7 @@ export default function NowPage() {
             <a href="https://x.com/_asheeshh">X</a>
           </li>
           <li>Trying my hand at building Roblox games</li>
+          <li>Trying out content creation on platforms like Instagram</li>
           <li>
             Looking forward to our company offsite at the end of the month and
             a concert in December
