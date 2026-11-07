@@ -9,7 +9,7 @@ export default function Home() {
       <section className="w-full flex flex-col justify-start p-[0.4rem]">
         <h2>Hello ~</h2>
         <p>
-          21 y/o semicolon dev trying to build better web interfaces. taught by
+          23 y/o semicolon dev trying to build better web interfaces. taught by
           the web itself, I love php but I write typescript, I love mern stack
           but I use the <a>t3-stack</a> ~ cus <a>theo</a> said{" "}
           <mark>typesaftey isn't optional</mark> apparently & btw I don't use
@@ -18,8 +18,8 @@ export default function Home() {
         <p>
           I'm a student, a fullstack dev, oss fanboy, techical writer, shitpost
           creator, hackathon grinder, and somewhat of a gamer as well. I can
-          write typesript, python, go, and I'm currently being forced to
-          learn c & cpp for my uni courses.
+          write typesript, python, go, and I'm currently being forced to learn c
+          & cpp for my uni courses.
         </p>
         <p className="mb-0">
           I like minimalism and simplicity and I try to reflect that in my works
@@ -27,8 +27,9 @@ export default function Home() {
           pop, synth, glitchcore, hyperpop, rock, and jpop. Meaningful and deep
           lyrics is what I look for in songs. My all time fav artist is{" "}
           <a>EDEN</a>. According to <a>last.fm</a>, I have listened to his songs
-          a total of <mark>5157</mark> times as of now. Apart from this I also like playing FPS games
-          like <a>VALORANT</a>, lifting <mark>weights</mark>, and binge watching shows on <a>netflix</a>.
+          a total of <mark>5157</mark> times as of now. Apart from this I also
+          like playing FPS games like <a>VALORANT</a>, lifting{" "}
+          <mark>weights</mark>, and binge watching shows on <a>netflix</a>.
         </p>
       </section>
       {/* <p className="divider italic">{"/ / / / / / / /"}</p> */}
@@ -42,7 +43,9 @@ export default function Home() {
             <a href="https://github.com/asrvd">@asrvd</a>
           </div>
           <div>
-            <p className="mb-2 text-zinc-400 font-semibold">X (formerly Twitter)</p>
+            <p className="mb-2 text-zinc-400 font-semibold">
+              X (formerly Twitter)
+            </p>
             <a href="https://x.com/_asheeshh">@_asheeshh</a>
           </div>
           <div>
@@ -51,7 +54,9 @@ export default function Home() {
           </div>
           <div>
             <p className="mb-2 text-zinc-400 font-semibold">Email</p>
-            <a href="mailto:ashirvadbhushan@gmail.com">ashirvadbhushan@gmail.com</a>
+            <a href="mailto:ashirvadbhushan@gmail.com">
+              ashirvadbhushan@gmail.com
+            </a>
           </div>
           <div>
             <p className="mb-2 text-zinc-400 font-semibold">Discord</p>

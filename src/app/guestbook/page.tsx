@@ -1,7 +1,7 @@
 "use server";
 
 import { db } from "@/server/db";
-import { Message, messages } from "@/server/db/schema";
+import { messages } from "@/server/db/schema";
 import { desc } from "drizzle-orm";
 import { cache } from "react";
 import GuestbookForm from "./form";
