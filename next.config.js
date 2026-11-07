@@ -6,6 +6,7 @@ const nextConfig = {
     serverActions: true,
     serverComponentsExternalPackages: ["@libsql/client"],
   },
+  turbopack: {}
 };
 
 module.exports = withContentlayer(nextConfig);
