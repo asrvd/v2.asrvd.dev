@@ -5,7 +5,7 @@ import Footer from "@/components/footer";
 
 export const metadata = {
   title: "asrvd (ashish)",
-  description: "semicolon dev • student",
+  description: "backend-leaning software engineer • kolkata",
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`font-sans bg-gradient-to-tr overflow-x-hidden min-w-screen from-zinc-950 via-stone-900 to-neutral-950 flex min-h-screen flex-col items-center justify-between`}
+        className={`font-sans bg-linear-to-tr overflow-x-hidden min-w-screen from-zinc-950 via-stone-900 to-neutral-950 flex min-h-screen flex-col items-center justify-between`}
       >
         <main className="p-4 py-24 gap-6 w-full lg:w-[55%]">
           <section className="w-full flex gap-4 justify-start mb-6 p-2">
@@ -27,10 +27,10 @@ export default function RootLayout({
                 className="w-12 h-12 rounded-full shadow-lg grayscale hover:grayscale-0 duration-300"
               />
             </div>
-            <div className="flex flex-col gap-2 justify-center">
-              <h2 className="mb-0">Ashish</h2>
+            <div className="flex flex-col justify-center gap-1.5">
+              <h2 className="mb-0! leading-none">ashish</h2>
               <p className="mb-0 text-zinc-400 font-normal leading-none">
-                Student • Dev • Ailurophile
+                software engineer • ailurophile
               </p>
             </div>
           </section>

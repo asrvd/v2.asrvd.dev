@@ -27,7 +27,7 @@ const timelineElements = [
   {
     date: "May, 2022",
     title: "Started content writing",
-    description: `By now I had got quite comfortable with React, Next.js, and other techs around web dev. Back then, I used to read blog posts from platforms like dev.to and hashnode and so I went like - Why don't I do it myself? This was the beginning of my content writing journey. I started writing blog posts about web dev on dev.to. My first few articles got no engagement at all and it was really hard to continue writing. But somehow I managed to keep writing consistently, it was only after a few weeks that I started getting some engagement on my articles. And now I've more than 1.5k followers and more than 100k views on my blogs on dev.to. Go check out my profile (I haven't written anything since long but I'll start writing again soon).`,
+    description: `By now I had got quite comfortable with React, Next.js, and other techs around web dev. Back then, I used to read blog posts from platforms like dev.to and hashnode and so I went like - Why don't I do it myself? This was the beginning of my content writing journey. I started writing blog posts about web dev on dev.to. My first few articles got no engagement at all and it was really hard to continue writing. But somehow I managed to keep writing consistently, it was only after a few weeks that I started getting some engagement on my articles. Since then it's grown to 31 articles, 4.4k+ followers, and 200k+ views on dev.to. Go check out my profile.`,
   },
   {
     date: "July, 2022",
@@ -40,9 +40,34 @@ const timelineElements = [
     description: `In July, Hashnode announced a month-long virtual hackathon partenered with Planetscale. I had never participated in any hackathons before and this was the perfect opportunity for me to test my skills I had been learning since months. My submission fo the hackathon was a web app that lets you create embeddable widgets with all your sponsrship links listed at one place. It was like a linktree but only for your sponsorship links. Again, I wasn't expecting to win at all but when the winners got announced in August and my project was in the top 5 submissions, I couldn't believe it.`
   },
   {
+    date: "2023",
+    title: "First internship, more hackathons",
+    description: `Did my first proper internship at GroVr where I built their full-stack MVP end to end. Around the same time I built <a href="https://github.com/asrvd">Supathreads</a>, a tool that turns blog posts into twitter threads, and it won Best Use of AI at Supabase Launch Week 7. Somewhere in there I also became a maintainer on <a href="https://github.com/t3-oss/create-t3-app">create-t3-app</a>, which is still one of the coolest things I've gotten to be a part of.`,
+  },
+  {
+    date: "January, 2024",
+    title: "Started contracting at TravelArrow",
+    description: `Joined TravelArrow on contract and worked on a travel chrome extension used by 300K+ people. Built remotely hosted iframe popups so the team could ship UI changes without waiting on an extension release, and built roomunlocker.com to compare hotel deals across booking sites. I did this alongside college.`,
+  },
+  {
+    date: "2025",
+    title: "Won the Arweave Hacker House",
+    description: `Went to Bangalore for the Arweave Hacker House and actually won it. Also picked up a second Supabase win with Munchwise, an AI calorie tracker that won Most Visually Pleasing.`,
+  },
+  {
+    date: "January, 2026",
+    title: "Joined Imagined, went full backend",
+    description: `Joined Imagined (later acquired by WLDD) as an SDE and pretty much switched sides from frontend to backend & infra. Scaled a consumer app to 100K+ concurrent users at launch, got p95 latency under 5ms, set up logging & monitoring with grafana and loki. I also started working in Java on a fintech product.`,
+  },
+  {
+    date: "2026",
+    title: "Graduated",
+    description: `Finished my B.Tech in IT from Kalyani Government Engineering College. I worked full time through the last couple of years of it.`,
+  },
+  {
     date: "Present",
     title: "Building & Learning",
-    description: `Since August, 2022, I've been working on a lot of open source projects and even became maintainer for a lot of projects. I even won a track prize in an offline hackathon and won an online hackathon by Supabase. Things have been going quite slow but time's running faster these days - thanks to my college life. But nevertheless the grind never stops. Hopefully, I still would have a lot of stories to share her about my journey. If you actually read it till here - thanks a lot ${"<3"}`
+    description: `These days I'm getting deeper into AI and agents and building things of my own in public again. If you actually read it till here - thanks a lot ${"<3"}`
   }
 ];
 
@@ -53,7 +78,7 @@ export default function TimelinePage() {
         <h2>Lifelogs ~</h2>
         <div className="flex flex-col gap-4 border-l border-stone-800/90 pl-4">
         {timelineElements.map((element, index) => (
-          <div className="flex flex-col gap-2 justify-start before:content-[''] before:absolute before:h-2 before:w-2 before:bg-stone-700 before:rounded-full before:-left-[1.25rem] before:top-1/2 relative" key={index}>
+          <div className="flex flex-col gap-2 justify-start before:content-[''] before:absolute before:h-2 before:w-2 before:bg-stone-700 before:rounded-full before:-left-5 before:top-1/2 relative" key={index}>
             <div>
               <span className="text-xs">{element.date}</span>
               <h4 className="m-0">{element.title}</h4>

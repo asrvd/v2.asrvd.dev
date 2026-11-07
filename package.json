@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "contentlayer build; next dev",
     "bcnt": "contentlayer build",
-    "build": "contentlayer build && next build",
+    "build": "contentlayer build; next build",
     "start": "next start",
     "lint": "next lint",
     "db:generate": "drizzle-kit generate",
@@ -43,13 +43,14 @@
     "rehype-prism-plus": "^2.0.2",
     "rehype-slug": "^6.0.0",
     "remark": "^15.0.1",
-    "remark-gfm": "^4.0.1",
+    "remark-gfm": "3.0.1",
     "swr": "^2.5.1",
     "tailwindcss": "4.3.5",
     "typescript": "7.0.2",
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "4.3.5",
     "@tailwindcss/typography": "^0.5.20",
     "dotenv": "^18.0.9",
     "drizzle-kit": "^0.31.11",

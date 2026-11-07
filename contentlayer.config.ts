@@ -32,8 +32,11 @@ const Post = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "posts",
+  disableImportAliasWarning: true,
   documentTypes: [Post],
   mdx: {
+    // always compile with the production jsx runtime; the dev one gets bundled into the post and breaks on React 19
+    mdxOptions: (opts) => ({ ...opts, development: false }),
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
       rehypeSlug,

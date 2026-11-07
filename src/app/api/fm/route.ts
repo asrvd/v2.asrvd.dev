@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
-  const res = await fetch(`https://sptfy-asrvd.deno.dev/np`, {
+  const res = await fetch(`https://sptfy-np-asrvd.val.run/np`, {
     next: { revalidate: 60 },
   });
 

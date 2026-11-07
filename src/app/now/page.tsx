@@ -3,21 +3,25 @@ export default function NowPage() {
     <div className="flex flex-col gap-12 w-full h-full">
       <section className="w-full flex flex-col justify-start p-[0.4rem]">
         <h2>Now ~</h2>
+        <p className="text-xs text-zinc-400">November 2026</p>
         <p>
-          Crying over college assignments, trying to hit the gym consistently,
-          and trying to get familiar with <mark>dsa</mark>, and{" "}
-          <mark>java (oops)</mark>.
+          Over the past month, I went to Bangalore for an in-office hackathon
+          at WLDD and won a consolation prize, finally planned and went on a
+          solo trip, and started a bulk at the gym after a long cut.
         </p>
-        <p>
-          I&apos;m confident enough with my web dev skills right now (still a
-          noob though). Trying to learn swift/swiftUI to build a macos menubar
-          app while completely ignoring my end semester exams.
-        </p>
-        <p>
-          Apart from all this, I&apos;m also trying to write more content and
-          craft beatiful animated ui components (will publish them soon at
-          ui[dot]asrvd[dot]me).
-        </p>
+        <p>Right now, I&apos;m:</p>
+        <ul className="list-disc pl-5 flex flex-col gap-2 mb-0">
+          <li>Getting back to writing more code by hand</li>
+          <li>
+            Learning about AI agents by building with them, and sharing it on{" "}
+            <a href="https://x.com/_asheeshh">X</a>
+          </li>
+          <li>Trying my hand at building Roblox games</li>
+          <li>
+            Looking forward to our company offsite at the end of the month and
+            a concert in December
+          </li>
+        </ul>
       </section>
     </div>
   );

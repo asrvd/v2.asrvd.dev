@@ -2,11 +2,11 @@
 const { withContentlayer } = require("next-contentlayer");
 
 const nextConfig = {
-  experimental: {
-    serverActions: true,
-    serverComponentsExternalPackages: ["@libsql/client"],
+  serverExternalPackages: ["@libsql/client"],
+  turbopack: {},
+  async rewrites() {
+    return [{ source: "/cv", destination: "/cv.pdf" }];
   },
-  turbopack: {}
 };
 
 module.exports = withContentlayer(nextConfig);

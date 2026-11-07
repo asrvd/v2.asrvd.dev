@@ -5,14 +5,18 @@ import { notFound } from "next/navigation";
 export const generateStaticParams = async () =>
   allPosts.map((post: Post) => ({ slug: post._raw.flattenedPath }));
 
-export const generateMetadata = ({ params }: { params: { slug: string } }) => {
-  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+type Props = { params: Promise<{ slug: string }> };
+
+export const generateMetadata = async ({ params }: Props) => {
+  const { slug } = await params;
+  const post = allPosts.find((post) => post._raw.flattenedPath === slug);
   if (!post) return;
   return { title: post.title };
 };
 
-const PostLayout = ({ params }: { params: { slug: string } }) => {
-  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+const PostLayout = async ({ params }: Props) => {
+  const { slug } = await params;
+  const post = allPosts.find((post) => post._raw.flattenedPath === slug);
   if (!post) {
     return notFound();
   }

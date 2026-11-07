@@ -4,7 +4,7 @@ import { saveEntry } from "../actions";
 import { SignInButton, SignOutButton } from "./actions";
 import { useRef } from "react";
 import type { Session } from "next-auth";
-import { experimental_useFormStatus as useFormStatus } from "react-dom";
+import { useFormStatus } from "react-dom";
 
 export default function GuestbookForm({
   session,
@@ -12,7 +12,6 @@ export default function GuestbookForm({
   session: Session | null;
 }) {
   const formRef = useRef<HTMLFormElement>(null);
-  const { pending } = useFormStatus();
 
   return (
     <section className="border border-stone-800/90 p-3 rounded-lg flex flex-row-reverse justify-between w-full h-full">
@@ -28,24 +27,7 @@ export default function GuestbookForm({
             formRef?.current?.reset();
           }}
         >
-          <textarea
-            name="entry"
-            required
-            aria-label="Enter your message"
-            placeholder="Enter your message"
-            disabled={pending}
-            className="rounded-lg bg-stone-800/80 h-[150px] text-base focus:ring-1 placeholder:text-zinc-500 ring-stone-600/30 border border-stone-700/30 outline-none p-3"
-          ></textarea>
-          <div className="flex gap-2 w-full">
-            <button
-              className="px-4 py-2 rounded-md bg-stone-800/80 max-w-max text-sm lg:text-base relative no-underline duration-300 ease-in focus:ring-1 ring-stone-600/30 hover:bg-stone-700/50 border border-stone-700/30 w-full"
-              type="submit"
-              disabled={pending}
-            >
-              Send
-            </button>
-            <SignOutButton />
-          </div>
+          <FormFields />
         </form>
       ) : (
         <div className="w-full h-full flex justify-between items-center">
@@ -54,5 +36,34 @@ export default function GuestbookForm({
         </div>
       )}
     </section>
+  );
+}
+
+
+// useFormStatus only reports pending state from inside a child of the <form>
+function FormFields() {
+  const { pending } = useFormStatus();
+
+  return (
+    <>
+    <textarea
+      name="entry"
+      required
+      aria-label="Enter your message"
+      placeholder="Enter your message"
+      disabled={pending}
+      className="rounded-lg bg-stone-800/80 h-[150px] text-base focus:ring-1 placeholder:text-zinc-500 ring-stone-600/30 border border-stone-700/30 outline-none p-3"
+    ></textarea>
+    <div className="flex gap-2 w-full">
+      <button
+        className="px-4 py-2 rounded-md bg-stone-800/80 max-w-max text-sm lg:text-base relative no-underline duration-300 ease-in focus:ring-1 ring-stone-600/30 hover:bg-stone-700/50 border border-stone-700/30 w-full"
+        type="submit"
+        disabled={pending}
+      >
+        Send
+      </button>
+      <SignOutButton />
+    </div>
+    </>
   );
 }
